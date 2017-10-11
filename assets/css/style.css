@@ -1,5 +1,8 @@
 body{
 	font-family: 'Gloria Hallelujah', cursive;
+	background-image: url(bg.jpg);
+	background-size: 100%;
+
 }
 
 
@@ -29,6 +32,7 @@ img {
 .panel-body{
 	text-align: center;
 	font-family: 'Gloria Hallelujah', cursive;
+	 
 }
 
 .crystal{

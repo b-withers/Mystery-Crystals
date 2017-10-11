@@ -9,6 +9,7 @@ $( document ).ready(function() {
         var targetNumber = Math.floor(Math.random() * 60) + 45;
 
         $("#number-to-guess").text(targetNumber);
+        console.log(targetNumber)
 
         var counter = 0;
 
@@ -16,10 +17,10 @@ $( document ).ready(function() {
 
         // We begin by expanding our array to include four options.
         var numberOptions = [
-        Math.floor(Math.random() * 3) + 2, 
+        Math.floor(Math.random() * 6) + 3, 
         Math.floor(Math.random() * 7) + 2, 
         Math.floor(Math.random() * 5) + 2, 
-        Math.floor(Math.random() * 15) + 2
+        Math.floor(Math.random() * 14) + 4
         ];
 
 
@@ -29,6 +30,7 @@ $( document ).ready(function() {
         $("#crystal2").attr("data-crystalvalue", numberOptions[1]);
         $("#crystal3").attr("data-crystalvalue", numberOptions[2]);
         $("#crystal4").attr("data-crystalvalue", numberOptions[3]);
+        console.log(numberOptions)
 
         $(".crystal").on("click", function () {
 
@@ -46,7 +48,7 @@ $( document ).ready(function() {
 
                     if (counter === targetNumber) {
                         wins ++;
-                        alert("you won");
+                        alert("Math must be your favorite subject!");
                         counter: 0;
                         reset();
 
@@ -54,7 +56,7 @@ $( document ).ready(function() {
 
                     else if (counter >= targetNumber) {
                         losses ++;
-                        alert("you lost");
+                        alert("Try again!");
                         counter: 0;
                         reset();
                     }
@@ -76,7 +78,13 @@ $( document ).ready(function() {
         targetNumber = Math.floor(Math.random() * 60) + 45;
         $("#number-to-guess").text(targetNumber);
         counter = 0;
-        numberOptions = [Math.floor(Math.random() * 3) + 2, Math.floor(Math.random() * 7) + 2, Math.floor(Math.random() * 5) + 2, Math.floor(Math.random() * 15) + 2];
+        
+        numberOptions = [
+        Math.floor(Math.random() * 6) + 3, 
+        Math.floor(Math.random() * 7) + 2, 
+        Math.floor(Math.random() * 5) + 2, 
+        Math.floor(Math.random() * 14) + 4
+        ];
 
         $("#crystal1").attr("data-crystalvalue", numberOptions[0]);
         $("#crystal2").attr("data-crystalvalue", numberOptions[1]);
