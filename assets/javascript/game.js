@@ -1,13 +1,13 @@
 $( document ).ready(function() {
 
-       var audioElement = document.createElement("audio");
+      var audioElement = document.createElement("audio");
       audioElement.setAttribute("src", "Assets/push.mp3");
 
       var winnerElement = document.createElement("audio");
       winnerElement.setAttribute("src", "Assets/winner.mp3");
 
-      //var LoserElement = document.createElement("audio");
-      //winnerElement.setAttribute("src", "Assets/laugh.mp3");
+      var LoserElement = document.createElement("audio");
+      LoserElement.setAttribute("src", "Assets/laugh.mp3");
 
 
         var wins = 0;
@@ -45,8 +45,7 @@ $( document ).ready(function() {
 
                     var crystalValue = ($(this).attr("data-crystalvalue"));
                     crystalValue = parseInt(crystalValue);
-                    // We then add the crystalValue to the user's "counter" which is a global variable.
-                    // Every click, from every crystal adds to the global counter.
+                    
                     counter += crystalValue;
                     $("h2 span").text(counter)
 
@@ -56,17 +55,17 @@ $( document ).ready(function() {
                     if (counter === targetNumber) {
                         wins ++;
                         winnerElement.play();
+                        counter = 0;
                         alert("Math must be your favorite subject!");
-                        counter: 0;
                         reset();
 
                     }
 
-                    else if (counter >= targetNumber) {
+                    else if(counter > targetNumber) {
                         losses ++;
-                        //LoserElement.play();
+                        LoserElement.play();
+                        counter = 0;
                         alert("Try again!");
-                        counter: 0;
                         reset();
                     }
 
