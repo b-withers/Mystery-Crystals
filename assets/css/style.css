@@ -1,0 +1,24 @@
+body{
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+
+
+.page-header{
+	
+	text-align: center;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
+/*.crystal{
+	 display:block;
+	margin-left: auto; 
+	margin-right: auto;
+} */
+
