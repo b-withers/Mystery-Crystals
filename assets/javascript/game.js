@@ -32,19 +32,16 @@ $( document ).ready(function() {
         ];
 
 
-
-
         $("#crystal1").attr("data-crystalvalue", numberOptions[0]);
         $("#crystal2").attr("data-crystalvalue", numberOptions[1]);
         $("#crystal3").attr("data-crystalvalue", numberOptions[2]);
         $("#crystal4").attr("data-crystalvalue", numberOptions[3]);
         console.log(numberOptions)
 
+        
         $(".crystal").on("click", function () {
-           
-            console.log("works")
-
-             audioElement.play();
+                    
+                    audioElement.play();
 
                     var crystalValue = ($(this).attr("data-crystalvalue"));
                     crystalValue = parseInt(crystalValue);
@@ -53,8 +50,8 @@ $( document ).ready(function() {
                     counter += crystalValue;
                     $("h2 span").text(counter)
 
-                    // All of the same game win-lose logic applies. So the rest remains unchanged.
                     
+                    //win / loss logic
 
                     if (counter === targetNumber) {
                         wins ++;
