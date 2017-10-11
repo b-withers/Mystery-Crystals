@@ -16,7 +16,7 @@
 <body>
 
 <div class="page-header">
-  <h1>Crystal Game!</h1>
+  <h1 id="header">Crystal Game!</h1>
 </div>
 
 
@@ -24,7 +24,7 @@
 <div class="col-lg-12">
     <div class="panel panel-default">
         <div class="panel-body">
-             <p id="instructions">Instructions Go Here</p>
+             <p id="instructions">You will be Given a random number to start the game. Each of the four crystals below will add a specific amount to your total score. You win the game by matching your total to the random number, you lose by going over! Each time the game restarts, you are given a new random number, and the crystals hidden amounts are reset.</p>
         </div>
     </div>
 </div>
@@ -35,7 +35,7 @@
     <div class="col-lg-6">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Panel title</h3>
+                <h3 class="panel-title">Current Game</h3>
             </div>
                 <div class="panel-body">
                     <h1>Goal: <span id="number-to-guess"></span></h1>
@@ -50,7 +50,7 @@
 <div class="col-lg-6">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title">Panel title</h3>
+            <h3 class="panel-title">Record</h3>
         </div>
             <div class="panel-body">
                 <h1>Wins: <span id="wins-span"></span></h1>
@@ -63,7 +63,7 @@
 <div class="col-lg-12">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title">Panel title</h3>
+            <h3 class="panel-title">Mystery Crystals</h3>
                 </div>
                     <div class="panel-body">
                     <img class="crystal" id="crystal1" src="assets/images/crystal1.png"/>

@@ -15,7 +15,12 @@ $( document ).ready(function() {
         // Now for the hard part. Creating multiple crystals each with their own unique number value.
 
         // We begin by expanding our array to include four options.
-        var numberOptions = [Math.floor(Math.random() * 3) + 2, Math.floor(Math.random() * 7) + 2, Math.floor(Math.random() * 5) + 2, Math.floor(Math.random() * 15) + 2];
+        var numberOptions = [
+        Math.floor(Math.random() * 3) + 2, 
+        Math.floor(Math.random() * 7) + 2, 
+        Math.floor(Math.random() * 5) + 2, 
+        Math.floor(Math.random() * 15) + 2
+        ];
 
 
 
@@ -42,6 +47,7 @@ $( document ).ready(function() {
                     if (counter === targetNumber) {
                         wins ++;
                         alert("you won");
+                        counter: 0;
                         reset();
 
                     }
@@ -49,6 +55,7 @@ $( document ).ready(function() {
                     else if (counter >= targetNumber) {
                         losses ++;
                         alert("you lost");
+                        counter: 0;
                         reset();
                     }
 
