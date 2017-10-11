@@ -1,6 +1,14 @@
 $( document ).ready(function() {
 
-       
+       var audioElement = document.createElement("audio");
+      audioElement.setAttribute("src", "Assets/push.mp3");
+
+      var winnerElement = document.createElement("audio");
+      winnerElement.setAttribute("src", "Assets/winner.mp3");
+
+      //var LoserElement = document.createElement("audio");
+      //winnerElement.setAttribute("src", "Assets/laugh.mp3");
+
 
         var wins = 0;
 
@@ -13,9 +21,9 @@ $( document ).ready(function() {
 
         var counter = 0;
 
-        // Now for the hard part. Creating multiple crystals each with their own unique number value.
+       
 
-        // We begin by expanding our array to include four options.
+        // array creating random numbers for the crystals
         var numberOptions = [
         Math.floor(Math.random() * 6) + 3, 
         Math.floor(Math.random() * 7) + 2, 
@@ -33,21 +41,24 @@ $( document ).ready(function() {
         console.log(numberOptions)
 
         $(".crystal").on("click", function () {
-
+           
             console.log("works")
+
+             audioElement.play();
 
                     var crystalValue = ($(this).attr("data-crystalvalue"));
                     crystalValue = parseInt(crystalValue);
                     // We then add the crystalValue to the user's "counter" which is a global variable.
                     // Every click, from every crystal adds to the global counter.
                     counter += crystalValue;
-                    $("h2 span").text(counter).closest('h2').slideDown();
+                    $("h2 span").text(counter)
 
                     // All of the same game win-lose logic applies. So the rest remains unchanged.
-                    //    alert("New score: " + counter);
+                    
 
                     if (counter === targetNumber) {
                         wins ++;
+                        winnerElement.play();
                         alert("Math must be your favorite subject!");
                         counter: 0;
                         reset();
@@ -56,6 +67,7 @@ $( document ).ready(function() {
 
                     else if (counter >= targetNumber) {
                         losses ++;
+                        //LoserElement.play();
                         alert("Try again!");
                         counter: 0;
                         reset();
