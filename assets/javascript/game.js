@@ -56,7 +56,7 @@ $( document ).ready(function() {
                         wins ++;
                         winnerElement.play();
                         counter = 0;
-                        alert("Math must be your favorite subject!");
+                        alert("YOU WIN!! Math must be your favorite subject!");
                         reset();
 
                     }
