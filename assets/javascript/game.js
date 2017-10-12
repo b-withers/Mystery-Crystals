@@ -52,22 +52,34 @@ $( document ).ready(function() {
                     
                     //win / loss logic
 
-                    if (counter === targetNumber) {
+                    if (counter === targetNumber) 
+                    {
                         wins ++;
                         winnerElement.play();
                         counter = 0;
-                        alert("YOU WIN!! Math must be your favorite subject!");
+                        
+                        function delay(){
+                        alert("YOU WON!! Math must be your favorite subject!");
                         reset();
+                        $("h2 span").text("0")}
+                        
+                        setTimeout(delay, 300);
+                        }
 
-                    }
-
-                    else if(counter > targetNumber) {
+                    else if(counter > targetNumber) 
+                    {
                         losses ++;
                         LoserElement.play();
                         counter = 0;
-                        alert("Try again!");
+                        
+                        function delay(){
+                        alert("You lost :( You should Study a little more");
                         reset();
-                    }
+                        $("h2 span").text("0")}
+                        
+                        setTimeout(delay, 300);
+                        
+                        }
 
 
 
@@ -100,6 +112,7 @@ $( document ).ready(function() {
         $("#crystal4").attr("data-crystalvalue", numberOptions[3]);
     }
 
+   
 
 
 
