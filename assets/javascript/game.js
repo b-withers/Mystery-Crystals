@@ -1,18 +1,18 @@
 $( document ).ready(function() {
 
       var audioElement = document.createElement("audio");
-      audioElement.setAttribute("src", "Assets/push.mp3");
+      audioElement.setAttribute("src", "assets/push.mp3");
 
       var winnerElement = document.createElement("audio");
-      winnerElement.setAttribute("src", "Assets/winner.mp3");
+      winnerElement.setAttribute("src", "assets/winner.mp3");
 
       var LoserElement = document.createElement("audio");
-      LoserElement.setAttribute("src", "Assets/laugh.mp3");
+      LoserElement.setAttribute("src", "assets/laugh.mp3");
 
 
-        var wins = 0;
+        var wins = " ";
 
-        var losses = 0;
+        var losses =" ";
 
         var targetNumber = Math.floor(Math.random() * 60) + 45;
 
@@ -56,7 +56,7 @@ $( document ).ready(function() {
                     {
                         wins ++;
                         winnerElement.play();
-                        counter = 0;
+                        
                         
                         function delay(){
                         alert("YOU WON!! Math must be your favorite subject!");
@@ -70,7 +70,7 @@ $( document ).ready(function() {
                     {
                         losses ++;
                         LoserElement.play();
-                        counter = 0;
+                        
                         
                         function delay(){
                         alert("You lost :( You should Study a little more");
@@ -86,7 +86,7 @@ $( document ).ready(function() {
                     var temp = document.getElementById("wins-span");
                     temp.textContent = wins;
 
-                    temp = document.getElementById("lose-span");
+                    var temp = document.getElementById("lose-span");
                     temp.textContent = losses;
 
         });
