@@ -14,6 +14,12 @@ $(document).ready(function () {
 
 	var losses = " ";
 
+
+
+	$('.crystal').click(function() {
+		$('.count').html(function(i, val) { return val*1+1 });
+	});
+
 	var targetNumber = Math.floor(Math.random() * 60) + 45;
 
 	$("#number-to-guess").text(targetNumber);
@@ -23,10 +29,10 @@ $(document).ready(function () {
 
 	// array creating random numbers for the crystals
 	var numberOptions = [
-		Math.floor(Math.random() * 6) + 3,
+		Math.floor(Math.random() * 10) + 3,
 		Math.floor(Math.random() * 7) + 2,
-		Math.floor(Math.random() * 5) + 2,
-		Math.floor(Math.random() * 14) + 4
+		Math.floor(Math.random() * 8) + -5,
+		Math.floor(Math.random() * 14) + 1
 	];
 
 
@@ -83,6 +89,8 @@ $(document).ready(function () {
 
 		var temp = document.getElementById("lose-span");
 		temp.textContent = losses;
+
+		
 	});
 
 
@@ -92,12 +100,14 @@ $(document).ready(function () {
 		targetNumber = Math.floor(Math.random() * 60) + 45;
 		$("#number-to-guess").text(targetNumber);
 		counter = 0;
+		
+		$(".count").text("0");
 
 		numberOptions = [
-			Math.floor(Math.random() * 6) + 3,
-			Math.floor(Math.random() * 7) + 2,
-			Math.floor(Math.random() * 5) + 2,
-			Math.floor(Math.random() * 14) + 4
+		Math.floor(Math.random() * 10) + 3,
+		Math.floor(Math.random() * 5) + -5,
+		Math.floor(Math.random() * 7) + 1,
+		Math.floor(Math.random() * 11) + 1
 		];
 
 		$("#crystal1").attr("data-crystalvalue", numberOptions[0]);
