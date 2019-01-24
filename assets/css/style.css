@@ -7,63 +7,8 @@ body {
 }
 
 img {
-	width: 150px;
-	height: 150px;
+	width: 125px;
+	height: 125px;
 }
 
-#header {
-	color: #7733ff;
-	text-align: center;
-	font-family: 'Gloria Hallelujah', cursive;
-	font-size: 60px;
-}
-
-
-
-
-
-
-
-.crystal {
-	height: 100px;
-	width: 100px;
-}
-
-#instructions {
-	font-size: 16px;
-}
-
-#number-to-guess {
-	color: #7733ff;
-}
-
-@media only screen and (max-width: 600px) {
-	.hdr{
-		display: none;
-	}
-
-	.main-inst{
-		display: none;
-	}
-
-	#header{
-		font-size: 2.25rem;
-	}
-
-	#instructions{
-		font-size: 1.25rem;
-	}
-	
-	.h1{
-		font-size: 1.75rem !important;
-	}
-
-	.h2{
-		font-size: 1.50rem !important;
-	}
-
-	.crystal{
-		height: 100px;
-		width: 100px;
-	}
-}
+.
