@@ -1,7 +1,9 @@
 body {
 	font-family: 'Gloria Hallelujah', cursive;
 	background-image: url(bg.jpg);
-	background-size: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+
 }
 
 img {
@@ -43,4 +45,22 @@ img {
 
 #number-to-guess {
 	color: #7733ff;
+}
+
+@media only screen and (max-width: 600px) {
+	.hdr{
+		display: none;
+	}
+
+	.main-inst{
+		display: none;
+	}
+
+	#header{
+		font-size: 1.75rem;
+	}
+
+	#instructions{
+		font-size: 1.25rem;
+	}
 }
