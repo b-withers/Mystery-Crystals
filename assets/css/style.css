@@ -57,10 +57,18 @@ img {
 	}
 
 	#header{
-		font-size: 1.75rem;
+		font-size: 2.25rem;
 	}
 
 	#instructions{
 		font-size: 1.25rem;
+	}
+	
+	.h1{
+		font-size: 1.75rem !important;
+	}
+
+	.h2{
+		font-size: 1.50rem !important;
 	}
 }
