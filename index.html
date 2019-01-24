@@ -1,110 +1,76 @@
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>MYSTERY CRYSTALS </title>
 
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>MYSTERY CRYSTALS </title>
 	<!-- Link to CSS Stylesheet -->
 	<link rel="stylesheet" href="assets/css/style.css">
-	<!-- image links -->
-	<link href="assets/images">
 	<!-- JQUERY Link -->
 	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 	 crossorigin="anonymous"></script>
 	<!-- Link to Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
 	 crossorigin="anonymous">
 	<!-- Link to Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-
 </head>
 
 <body>
-	<div class="container">
-		<div class="page-header">
-			<h1 id="header">Mystery Crystals</h1>
-		</div>
 
 
-		<div class="container main-inst">
-			<div class="col-lg-12">
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<p id="instructions">You will be given a random Goal to start the game. Each of the four Mystery Crystals below
-							will be assigned a random
-							hidden number. By clicking on the Mystery Crystals you will add the hidden amount to your Current Total. You win
-							the
-							game by matching your Current Total to the Goal, you lose by going over! Each time the game restarts, you are
-							given
-							a new Goal, and the Mystery Crystals hidden amounts are reset.</p>
-					</div>
-				</div>
-			</div>
-		</div>
+	<!--You will be given a random Goal to start the game. Each of the four Mystery Crystals below will be assigned a random
+			hidden number. By clicking on the Mystery Crystals you will add the hidden amount to your Current Total. You win
+			the game by matching your Current Total to the Goal, you lose by going over! Each time the game restarts, you are given
+			a new Goal, and the Mystery Crystals hidden amounts are reset.-->
 
 
 
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-sm-12">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title">Current Game</h3>
-						</div>
-						<div class="panel-body">
-							<h1 class="h1">Goal:
-								<span id="number-to-guess"></span>
-							</h1>
-							<h2 class="h2">Current Total:
-								<span>0</span>
-							</h2>
-						</div>
-					</div>
-				</div>
-
-
-
-
-				<div class="col-lg-6 col-sm-12">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title">Record</h3>
-						</div>
-						<div class="panel-body">
-							<h1 class="h1">Wins:
-								<span id="wins-span"></span>
-							</h1>
-							<h2 class="h2">Losses:
-								<span id="lose-span"></span>
-							</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-
-		<div class="container">
-			<div class="col-lg-12">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">Mystery Crystals</h3>
-					</div>
-					<div class="panel-body">
-						<img class="crystal" id="crystal1" src="assets/images/crystal1.png" />
-						<img class="crystal" id="crystal2" src="assets/images/crystal2.png" />
-						<img class="crystal" id="crystal3" src="assets/images/crystal3.png" />
-						<img class="crystal" id="crystal4" src="assets/images/crystal4.png" />
-					</div>
-				</div>
-			</div>
-		</div>
+	<div class="container text-center col">
+		<h1 class="h1">Goal:
+			<span id="number-to-guess"></span>
+		</h1>
+		<h2 class="h2">Current Total:
+			<span>0</span>
+		</h2>
 	</div>
+
+	<div class="container text-center col">
+		<h1 class="h1">Wins:
+			<span id="wins-span"></span>
+		</h1>
+		<h2 class="h2">Losses:
+			<span id="lose-span"></span>
+		</h2>
+	</div>
+
+
+	<div class="container text-center">
+
+		<div class="container text-center col">
+			
+				<img class="crystal" id="crystal1" src="assets/images/crystal1.png" />
+				<img class="crystal" id="crystal2" src="assets/images/crystal2.png" />
+		
+		</div>
+
+		<div class="container text-center col">
+			<img class="crystal" id="crystal3" src="assets/images/crystal3.png" />
+			<img class="crystal" id="crystal4" src="assets/images/crystal4.png" />
+		</div>
+
+	
+
 
 	<!-- Javascript External page link -->
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+	 crossorigin="anonymous"></script>
 </body>
 
 </html>

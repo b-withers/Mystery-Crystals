@@ -18,21 +18,11 @@ img {
 	font-size: 60px;
 }
 
-.page-header {
-	text-align: center;
-	font-family: 'Gloria Hallelujah', cursive;
-	font-size: 60px;
-}
 
-.panel-title {
-	text-align: center;
-	font-family: 'Gloria Hallelujah', cursive;
-}
 
-.panel-body {
-	text-align: center;
-	font-family: 'Gloria Hallelujah', cursive;
-}
+
+
+
 
 .crystal {
 	height: 100px;
@@ -70,5 +60,10 @@ img {
 
 	.h2{
 		font-size: 1.50rem !important;
+	}
+
+	.crystal{
+		height: 100px;
+		width: 100px;
 	}
 }
